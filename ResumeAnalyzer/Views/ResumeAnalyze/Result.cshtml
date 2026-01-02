@@ -1,0 +1,40 @@
+﻿@model ResumeAnalyzer.Models.ResumeAnalysisResult
+
+@{
+    ViewData["Title"] = "Analysis Result";
+}
+<style>
+
+</style>
+
+@* <h2>Analysis Result</h2>
+
+<p><strong>Match Percentage:</strong> @Model.MatchPercentage %</p>
+
+<h3>Resume Text</h3>
+<div class="border p-2 mb-3" style="background-color:#f8f9fa; max-height:200px; overflow:auto;">
+    @Model.ResumeText
+</div>
+
+<h3>Job Description Text</h3>
+<div class="border p-2 mb-3" style="background-color:#f8f9fa; max-height:200px; overflow:auto;">
+    @Model.JobDescriptionText
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Analyze Another</a> *@
+<link href="~/css/result.css" rel="stylesheet" />
+
+<div class="row ResultContainer">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <strong class="percentagenumber">Match Percentage:</strong>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="result-container">
+            <div class="score-circle">
+                <span>@Model.MatchPercentage</span>
+            </div>
+        </div>
+    </div>
+</div>
+<a asp-action="Index" class="btn btn-secondary">Analyze Another</a>
+

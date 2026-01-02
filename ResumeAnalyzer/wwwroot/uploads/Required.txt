@@ -1,0 +1,23 @@
+Required
+BS degree in Computer Sciences, programming or a related discipline or demonstrable equivalent experience
+1-3 years of experience with Python (C#/.NET experience a plus)
+Experience with API and Microservice Development
+Familiarity with cloud infrastructure
+Familiarity with GCP services - Cloud Run, Cloud Functions, Firestore, Pub/Sub, GCS
+Experience with SQL and relational databases OR NoSQL databases
+Familiarity with Git or other SCM tools
+Familiarity with CI/CD pipelines and the necessary steps within a pipeline
+Strong understanding of Object-Oriented Programming Principles, Data Structures, and Algorithms
+Experience (or open to) using Test-Driven Development (TDD)
+A strong desire to write testable code and work closely with your team to ensure our applications are of the highest quality
+Capable of analyzing issues in existing code and suggesting solutions
+Eager to learn
+Preferred
+Familiarity with Docker and Kubernetes
+Understands API gateway concepts (auth, routing, policies) using Apigee or similar
+Familiar with event-driven patterns (SSE, Pub/Sub) for system communication
+Familiar with secure file handling with signed URLs, scanning, and supported file types (.pdf, .jpg)
+Familiarity with FastAPI
+Experience working with Google Cloud Platform
+Familiarity with Terraform
+Experience with feature flags

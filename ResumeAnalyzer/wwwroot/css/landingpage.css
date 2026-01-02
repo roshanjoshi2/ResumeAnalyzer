@@ -1,0 +1,151 @@
+﻿ 
+body, html {
+    height: 100%;
+    margin: 0;
+    background: #f5f5f5;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    /*background-image: url('../images/top-view-desk-concept-with-copy-space.jpg');*/
+}
+.welcome {
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+.gradient-text {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#808080, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.landing-container {
+    /*height: 100vh;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-card {
+    /*background: #ffffff;*/
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Left animated side */
+.landing-left {
+    position: relative;
+    width: 50%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: moveBlob 15s infinite alternate;
+}
+
+    .blob:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        background: #0d6efd;
+        top: 10%;
+        left: 5%;
+        animation-duration: 12s;
+    }
+
+    .blob:nth-child(2) {
+        width: 150px;
+        height: 150px;
+        background: #6f42c1;
+        top: 40%;
+        left: 20%;
+        animation-duration: 18s;
+    }
+
+    .blob:nth-child(3) {
+        width: 100px;
+        height: 100px;
+        background: #fd7e14;
+        top: 60%;
+        left: 50%;
+        animation-duration: 20s;
+    }
+
+@keyframes moveBlob {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(30px, 50px) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-20px, 30px) rotate(360deg);
+    }
+}
+
+/* Right text side */
+.landing-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.hero-header{
+    text-align:center;
+    
+}
+.hero-sub-herder {
+    text-align: center;
+}
+
+.landing-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#5c5555, #392323);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+    .landing-button:hover {
+        transform: scale(1.1);       
+        color: white;
+        background-color:#848282;
+       
+    }
+
+/* FIX: Move @media inside <style> and do not use @ in Razor for CSS media queries */
+/* Use plain CSS syntax for media queries */
+@media (max-width: 768px) {
+    .landing-left {
+        display: none;
+    }
+
+    .landing-right {
+        width: 100%;
+    }
+}
+
+

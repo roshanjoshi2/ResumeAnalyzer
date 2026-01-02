@@ -1,0 +1,117 @@
+﻿@model ResumeAnalyzer.Models.JobApplication
+
+@{
+    ViewData["Title"] = "Resume Analyzer";
+}
+@* this is working *@
+@* <h2 class="hero-header">Resume Analyzer</h2>
+<p class="hero-sub-herder">Upload your resume and either upload a job description file or enter text below.</p>
+
+<link href="~/css/landingpage.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .resume{
+        display:flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+    }
+
+    .form-control{
+        height:500px;
+
+    }
+</style>
+
+<div class="container landing-container">
+
+    <div class="landing-card">
+        <form asp-action="Index" method="post" enctype="multipart/form-data">
+
+            <div class="row">
+                <div class="col col-lg-6 col-mb-6 col-sm=12">
+                    <div class="mb-3">
+                        <label asp-for="JobDescriptionText"></label>
+                        <textarea asp-for="JobDescriptionText" class="form-control" rows="5" data-val="false"></textarea>
+                        <span asp-validation-for="JobDescriptionText" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="JobDescription"></label>
+                        <input asp-for="JobDescription" type="file" class="form-control" accept=".pdf,.txt,.docx" />
+                        <span asp-validation-for="JobDescription" class="text-danger"></span>
+                    </div>
+                   
+                   
+                </div>
+
+                <div class="col col-lg-6 col-mb-6 col-sm=12 resume">
+                    
+                     <div class="mb-3">
+                        <label asp-for="Resume"></label>
+                        <input asp-for="Resume" type="file" class="form-control" accept=".pdf,.txt,.docx" />
+                        <span asp-validation-for="Resume" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Analyze</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+   
+    
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+ *@ 
+
+@* this is working end *@
+
+<link href="~/css/resumeupload.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<div class="container-fluid">
+
+
+    <form class="form-container" asp-action="Index" method="post" enctype='multipart/form-data'>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="upload-files-container">
+                    <div class="drag-file-area">
+                        <span class="material-icons-outlined upload-icon"> file_upload </span>
+                        <h3 class="dynamic-message jDFileName"> Choose file </h3>
+                        <label class="label">  <input type="file" class="default-file-input" asp-for="JobDescription" accept=".pdf,.txt,.docx" /> <span class="browse-files-text" id="browseJdBtn">browse file</span>  </span> </label>
+                    </div>
+                    <button type="button" class="upload-button"> Job Description </button>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="upload-files-container">
+                    <div class="drag-file-area">
+                        <span class="material-icons-outlined upload-icon"> file_upload </span>
+                        <h3 class="dynamic-message ResumeFileName"> Choose file </h3>
+                        <label class="label">  <input type="file" class="default-file-input  Resume" asp-for="Resume" accept=".pdf,.txt,.docx" /> <span class="browse-files-text" id="browseResumeBtn">browse file</span>  </span> </label>
+                    </div>
+                    <button type="button" class="upload-button"> Resume </button>
+                </div>
+            </div>
+            <div class="Analyze-button">
+                <button type="submit" class="uploadbuttonAnalyze mt-4"> <span>Analyze<span />  </button>
+            </div>
+
+
+
+        </div>
+
+    </form>
+</div>
+<script src="~/js/resumeupload.js"></script>

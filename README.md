@@ -10,19 +10,32 @@ Resume & Job Description Processing
 
 Extracts and normalizes text from resumes and job descriptions
 Text Preprocessing Pipeline
+
 Text cleaning and normalization
+
 Stop-word removal and tokenization
+
 N-gram generation for multi-word skill detection
+
 Keyword & Relevance Matching
+
 TF-IDF–based scoring to measure term importance
+
 Identifies matched and missing skills with relevance scores
+
 Explainable Match Output
+
 Transparent results that show why a resume matches or falls short
+
 Database-Driven Design
+
 Stores resumes, job descriptions, extracted features, match results, and user history
+
 Supports repeat analysis and historical comparisons
+
 
 **In Progress 🚧**
 
 Semantic Matching
+
 Enhancing the engine to detect contextual skill similarity beyond exact keyword overlap

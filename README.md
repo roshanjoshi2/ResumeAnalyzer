@@ -1,11 +1,13 @@
 **Resume Analyzer**
-Overview
+
 
 This project is a resume analysis and job matching engine built to evaluate how closely a candidate’s resume aligns with a given job description. 
 It combines statistical NLP techniques, structured preprocessing, and persistent data storage to deliver clear, explainable match results.
 
 **Core Features**
+
 Resume & Job Description Processing
+
 Extracts and normalizes text from resumes and job descriptions
 Text Preprocessing Pipeline
 Text cleaning and normalization
